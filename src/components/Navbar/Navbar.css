@@ -1,0 +1,11 @@
+.links {
+  display: flex;
+  gap: 40px;
+  margin-left: 40px;
+}
+nav {
+  align-items: center;
+  display: flex;
+  font-size: 24px;
+  background-color: #1d1d1b;
+}
