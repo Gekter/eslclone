@@ -4,9 +4,9 @@ import './Navbar.css'
 
 const Navbar = (props) => {
   let arr = [
-    {id: '1', NavText: 'Главная', link: '#1'},
-    {id: '2',NavText: 'Рейтинг', link: '#2'},
-    {id: '3',NavText: 'Турниры', link: '#3'}
+    {id: '1', NavText: 'Рейтинг', link: '#1'},
+    {id: '2', NavText: 'Турниры', link: '#2'},
+    {id: '3', NavText: 'Игроки', link: '#3'}
   ]
   return (
     <nav>

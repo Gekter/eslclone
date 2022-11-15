@@ -1,0 +1,18 @@
+.player {
+  background-color: #e3ff09;
+  color: #1d1d1b;
+  border-radius: 10px;
+  padding: 3px 10px 1px;
+  margin-right: 4px;
+  line-height: 25px;
+  font-size: 26px;
+}
+
+.players {
+  box-sizing: border-box;
+  flex: 1 1 0%;
+  min-width: 500px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}

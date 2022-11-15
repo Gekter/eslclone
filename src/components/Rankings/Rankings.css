@@ -1,0 +1,26 @@
+.Rankings {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+  max-width: 1800px;
+  margin: 0px auto;
+}
+
+.Rankings__info {
+  box-sizing: border-box;
+  padding-left: 4px;
+  padding-right: 4px;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  position: relative;
+  max-width: 1200px;
+}
+
+.Rankings__page-title {
+  display: block;
+  margin: 20px 0px 40px;
+  text-align: center;
+  width: 100%;
+}
