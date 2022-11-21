@@ -82,7 +82,7 @@ const App = () => {
     ]
   },
   ]
-
+  fetch('https://cdn1.api.esl.tv/dota2/worldranking/teamhistory/rankings?date=2022-8-16')
 
 
   return (
