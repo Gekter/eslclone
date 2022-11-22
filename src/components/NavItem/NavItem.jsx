@@ -1,11 +1,12 @@
 import './NavItem.css'
+import { Link } from "react-router-dom";
 
 const NavItem = (props) => {
   return (
     <div>
-      <a href={props.NavInfo.link}>
+      <Link to={props.NavInfo.link}>
         <span>{props.NavInfo.NavText}</span>
-      </a>
+      </Link>
     </div>
   )
 }

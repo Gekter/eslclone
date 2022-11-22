@@ -1,6 +1,12 @@
 import Navbar from './../Navbar/Navbar.jsx';
 import './App.css';
 import Rankings from './../Rankings/Rankings.jsx'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+
 
 const App = () => {
   const rankingsData = [{
@@ -82,14 +88,30 @@ const App = () => {
     ]
   },
   ]
-  fetch('https://cdn1.api.esl.tv/dota2/worldranking/teamhistory/rankings?date=2022-8-16')
+  
 
 
   return (
-    <div>
-      <Navbar />
-      <Rankings rankingsData={rankingsData} />
-    </div>
+    <BrowserRouter>
+      <div>
+        <Navbar />
+
+
+        <Routes>
+          <Route path="/" element={<Rankings rankingsData={rankingsData} />} />
+        
+          <Route path="/team" element={<div>
+              <h2>TEAM</h2>
+            </div>} />
+            
+          <Route path="/tournaments" element={
+          <div>
+              <h1>123</h1>
+            </div>} />
+          
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
