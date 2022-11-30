@@ -1,0 +1,17 @@
+.container {
+  box-sizing: border-box;
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 70px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 26px;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}

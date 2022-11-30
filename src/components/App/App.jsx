@@ -1,6 +1,7 @@
 import Navbar from './../Navbar/Navbar.jsx';
 import './App.css';
 import Rankings from './../Rankings/Rankings.jsx'
+import Tournament from '../Tournament/Tournament.jsx';
 import {
   BrowserRouter,
   Routes,
@@ -88,6 +89,192 @@ const App = () => {
     ]
   },
   ]
+
+
+  const tournaments = [{
+    id: 1,
+    date: 'October 30th 2022',
+    TournamentName: 'The International 2022',
+    quality: 'TI',
+    tournamentSize: 'XXL',
+    teams: [
+      {id: 1, name: 'Tundra Esport', pts: 1725.0, place: 1},
+      {id: 2, name: 'Team Secret', pts: 1050.0, place: 2},
+      {id: 3, name: 'Team Liquid', pts: 750.0, place: 3},
+      {id: 4, name: 'Team Aster', pts: 600.0, place: 4},
+    ]
+  },
+  {
+    id: 2,
+    date: 'August 28th 2022',
+    TournamentName: 'ESL One Malaysia 2022',
+    quality: 'B',
+    tournamentSize: 'L',
+    teams: [
+      {id: 6, name: 'OG', pts: 340.0, place: 1},
+      {id: 4, name: 'Team Aster', pts: 200.0, place: 2},
+      {id: 2, name: 'Team Secret', pts: 156.0, place: 3},
+      {id: 5, name: 'Fnatic', pts: 120.0, place: 4},
+    ]
+  },
+  {
+    id: 3,
+    date: 'August 28th 2022',
+    TournamentName: 'ESL One Malaysia 2022',
+    quality: 'B',
+    tournamentSize: 'L',
+    teams: [
+      {id: 6, name: 'OG', pts: 340.0, place: 1},
+      {id: 4, name: 'Team Aster', pts: 200.0, place: 2},
+      {id: 2, name: 'Team Secret', pts: 156.0, place: 3},
+      {id: 5, name: 'Fnatic', pts: 120.0, place: 4},
+    ]
+  },
+  {
+    id: 4,
+    date: 'August 28th 2022',
+    TournamentName: 'ESL One Malaysia 2022',
+    quality: 'B',
+    tournamentSize: 'L',
+    teams: [
+      {id: 6, name: 'OG', pts: 340.0, place: 1},
+      {id: 4, name: 'Team Aster', pts: 200.0, place: 2},
+      {id: 2, name: 'Team Secret', pts: 156.0, place: 3},
+      {id: 5, name: 'Fnatic', pts: 120.0, place: 4},
+    ]
+  },
+  {
+    id: 5,
+    date: 'August 28th 2022',
+    TournamentName: 'ESL One Malaysia 2022',
+    quality: 'B',
+    tournamentSize: 'L',
+    teams: [
+      {id: 6, name: 'OG', pts: 340.0, place: 1},
+      {id: 4, name: 'Team Aster', pts: 200.0, place: 2},
+      {id: 2, name: 'Team Secret', pts: 156.0, place: 3},
+      {id: 5, name: 'Fnatic', pts: 120.0, place: 4},
+    ]
+  },
+  {
+    id: 6,
+    date: 'August 28th 2022',
+    TournamentName: 'ESL One Malaysia 2022',
+    quality: 'B',
+    tournamentSize: 'L',
+    teams: [
+      {id: 6, name: 'OG', pts: 340.0, place: 1},
+      {id: 4, name: 'Team Aster', pts: 200.0, place: 2},
+      {id: 2, name: 'Team Secret', pts: 156.0, place: 3},
+      {id: 5, name: 'Fnatic', pts: 120.0, place: 4},
+    ]
+  },
+  {
+    id: 7,
+    date: 'August 28th 2022',
+    TournamentName: 'ESL One Malaysia 2022',
+    quality: 'B',
+    tournamentSize: 'L',
+    teams: [
+      {id: 6, name: 'OG', pts: 340.0, place: 1},
+      {id: 4, name: 'Team Aster', pts: 200.0, place: 2},
+      {id: 2, name: 'Team Secret', pts: 156.0, place: 3},
+      {id: 5, name: 'Fnatic', pts: 120.0, place: 4},
+    ]
+  },
+  {
+    id: 8,
+    date: 'August 28th 2022',
+    TournamentName: 'ESL One Malaysia 2022',
+    quality: 'B',
+    tournamentSize: 'L',
+    teams: [
+      {id: 6, name: 'OG', pts: 340.0, place: 1},
+      {id: 4, name: 'Team Aster', pts: 200.0, place: 2},
+      {id: 2, name: 'Team Secret', pts: 156.0, place: 3},
+      {id: 5, name: 'Fnatic', pts: 120.0, place: 4},
+    ]
+  },
+  {
+    id: 9,
+    date: 'August 28th 2022',
+    TournamentName: 'ESL One Malaysia 2022',
+    quality: 'B',
+    tournamentSize: 'L',
+    teams: [
+      {id: 6, name: 'OG', pts: 340.0, place: 1},
+      {id: 4, name: 'Team Aster', pts: 200.0, place: 2},
+      {id: 2, name: 'Team Secret', pts: 156.0, place: 3},
+      {id: 5, name: 'Fnatic', pts: 120.0, place: 4},
+    ]
+  },
+  {
+    id: 10,
+    date: 'August 28th 2022',
+    TournamentName: 'ESL One Malaysia 2022',
+    quality: 'B',
+    tournamentSize: 'L',
+    teams: [
+      {id: 6, name: 'OG', pts: 340.0, place: 1},
+      {id: 4, name: 'Team Aster', pts: 200.0, place: 2},
+      {id: 2, name: 'Team Secret', pts: 156.0, place: 3},
+      {id: 5, name: 'Fnatic', pts: 120.0, place: 4},
+    ]
+  },
+  {
+    id: 11,
+    date: 'August 28th 2022',
+    TournamentName: 'ESL One Malaysia 2022',
+    quality: 'B',
+    tournamentSize: 'L',
+    teams: [
+      {id: 6, name: 'OG', pts: 340.0, place: 1},
+      {id: 4, name: 'Team Aster', pts: 200.0, place: 2},
+      {id: 2, name: 'Team Secret', pts: 156.0, place: 3},
+      {id: 5, name: 'Fnatic', pts: 120.0, place: 4},
+    ]
+  },
+  {
+    id: 12,
+    date: 'August 28th 2022',
+    TournamentName: 'ESL One Malaysia 2022',
+    quality: 'B',
+    tournamentSize: 'L',
+    teams: [
+      {id: 6, name: 'OG', pts: 340.0, place: 1},
+      {id: 4, name: 'Team Aster', pts: 200.0, place: 2},
+      {id: 2, name: 'Team Secret', pts: 156.0, place: 3},
+      {id: 5, name: 'Fnatic', pts: 120.0, place: 4},
+    ]
+  },
+  {
+    id: 13,
+    date: 'August 28th 2022',
+    TournamentName: 'ESL One Malaysia 2022',
+    quality: 'B',
+    tournamentSize: 'L',
+    teams: [
+      {id: 6, name: 'OG', pts: 340.0, place: 1},
+      {id: 4, name: 'Team Aster', pts: 200.0, place: 2},
+      {id: 2, name: 'Team Secret', pts: 156.0, place: 3},
+      {id: 5, name: 'Fnatic', pts: 120.0, place: 4},
+    ]
+  },
+  {
+    id: 14,
+    date: 'August 28th 2022',
+    TournamentName: 'ESL One Malaysia 2022',
+    quality: 'B',
+    tournamentSize: 'L',
+    teams: [
+      {id: 6, name: 'OG', pts: 340.0, place: 1},
+      {id: 4, name: 'Team Aster', pts: 200.0, place: 2},
+      {id: 2, name: 'Team Secret', pts: 156.0, place: 3},
+      {id: 5, name: 'Fnatic', pts: 120.0, place: 4},
+    ]
+  },
+  
+]
   
 
 
@@ -104,10 +291,7 @@ const App = () => {
               <h2>TEAM</h2>
             </div>} />
             
-          <Route path="/tournaments" element={
-          <div>
-              <h1>123</h1>
-            </div>} />
+          <Route path="/tournaments" element={<Tournament tournaments={tournaments}/>} />
           
         </Routes>
       </div>

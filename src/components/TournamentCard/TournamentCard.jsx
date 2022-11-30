@@ -1,58 +1,69 @@
-import './TournamentCard.css';
+import styles from './TournamentCard.module.css';
+import { Link } from "react-router-dom";
 
 const TournamentCard = (props) => {
+
   return (
-    <div className='tournament-card'>
-      <div className='tournament-card__inner-card-block inner-card-block'>
-        <div className='inner-card-block__card-header card-header'>
-          <div className='card-header__tournament-date tournament-date'>
-            <span>
-              {/* date */}
-            </span>
+    <div className={styles.tournamentCard}>
+      <div className={styles.innerCardBlock}>
+        <div className={styles.cardHeader}>
+          <div className={styles.headerLeft}>
+            <div className={styles.tournamentDate}>
+              <span>
+                {props.data.date}
+              </span>
+            </div>
+            <Link className={styles.tournamentName}>
+              {props.data.TournamentName/* TournamentName */}
+            </Link>
           </div>
-          <h3>
-            {/* quality */}
-          </h3>
-          <div>
-            <h2>
-              {/* TournamentName */}
+          
+          <div className={styles.tournamentQuality}>
+            <div className={styles.tournamentQuality__innerBlock}>
+              <h2 className={styles.tournamentQuality__name}>
+                {props.data.quality/* quality */}
               </h2>
-            <div>
-              {/* fantas icon */}
+              <div className={styles.tournamentSize}>
+
+                {props.data.tournamentSize/* tournament size */}
+              </div>
             </div>
-            <div>
-              {/* tournament size */}
-            </div>
+            
           </div>
         </div>
-        {/* x times */}
-        <div className='inner-card-block__team-list team-list'>
-          <div className='team-list__team-card-row team-card-row'>
-            <div className='team-card-row__team-card-row-place team-card-row-place'>
-              <span>
-                {/* place */}
-              </span>
-            </div>
-            <div className='team-card-row__team-card-row-team team-card-row-team'>
-              <span>
-                {/* teamName */}
-              </span>
-            </div>
-            <div className='team-card-row__team-card-row-points team-card-row-points'>
-              +
-              <span>
-                {/* points */}
-                <span>
-                  {/* subs */}
+        
+        <div>
+          {props.data.teams.map((team) => (
+            <div className={styles.teamCardRow} key={team.id}>
+              <div className={styles.teamCardRow__place}>
+                <span className={styles.place__span}>
+                  {team.place}
                 </span>
-              </span>
-            </div>
+              </div>
+              <div className={styles.teamCardRow__team}>
+                <span className={styles.team__name}>
+                  {team.name}
+                </span>
+              </div>
+              <div className={styles.teamCardRow__points}>
+                +
+                <span className={styles.points__pts}>
+                  {team.pts}
+                  <span className={styles.points__sub}>
+                    {' pts'/* subs */}
+                  </span>
+                </span>
+              </div>
 
-          </div>
+            </div>
+          ))}
+          {/* x times */}
+          
         </div>
 
 
-        <div className='tournament-card__view-full-button view-full-button'>
+        <div>
+          <Link className={styles.teamCardRow__button}>Full Results</Link>
           {/* <Link /> */}
         </div>
 
