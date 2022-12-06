@@ -4,16 +4,17 @@ import './Navbar.css'
 
 const Navbar = (props) => {
   let arr = [
-    {id: '1', NavText: 'Рейтинг', link: '/'},
-    {id: '2', NavText: 'Турниры', link: '/tournaments'},
-    {id: '3', NavText: 'Игроки', link: '/team'}
+    {NavText: 'Рейтинг', link: '/'},
+    {NavText: 'Турниры', link: '/tournaments'},
+    {NavText: 'Игроки', link: '/team'},
+    {NavText: 'Правила', link: '/rules'}
   ]
   return (
     <nav>
       <Logo />
       <div className="links">
         { arr.map((obj) => (
-          <NavItem key={obj.id} NavInfo={obj}/>
+          <NavItem key={obj.link} NavInfo={obj}/>
         ))}
       </div>
     </nav>

@@ -2,6 +2,7 @@ import Navbar from './../Navbar/Navbar.jsx';
 import './App.css';
 import Rankings from './../Rankings/Rankings.jsx'
 import Tournament from '../Tournament/Tournament.jsx';
+import Rules from '../Rules/Rules.jsx';
 import {
   BrowserRouter,
   Routes,
@@ -292,6 +293,7 @@ const App = () => {
             </div>} />
             
           <Route path="/tournaments" element={<Tournament tournaments={tournaments}/>} />
+          <Route path="/rules" element={<Rules />} />
           
         </Routes>
       </div>

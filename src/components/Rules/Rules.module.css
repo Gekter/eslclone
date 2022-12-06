@@ -1,0 +1,61 @@
+.container {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+  max-width: 1800px;
+  margin: 0px auto;
+}
+
+.contaierColumn {
+  max-width: 800px;
+}
+
+.contaierColumnBoxInner {
+  box-sizing: border-box;
+  padding-left: 4px;
+  padding-right: 4px;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  position: relative;
+}
+
+.rulesBody {
+
+}
+
+.rulesBody h2 {
+  font-size: 60px;
+  line-height: 60px;
+}
+
+.rulesBody p {
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.rulesBody ul, .rulesBody li {
+  font-size: 15px;
+  line-height: 20px;
+  font-family: courier;
+}
+
+.rulesBody li::marker {
+  content: '• ';
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  text-transform: none;
+  text-indent: 0px !important;
+  text-align: start !important;
+  text-align-last: start !important;
+}
+
+.rulesBody ul li ul li::marker {
+  content: '◦ ';
+}
+
+.rulesBody h4 {
+  font-size: 30px;
+}
+

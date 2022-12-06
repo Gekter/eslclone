@@ -1,0 +1,40 @@
+.container {
+  box-sizing: border-box;
+  margin-left: 8px;
+  margin-right: 8px;
+  flex: 1 1 150px;
+  min-width: 100px;
+  max-width: 200px;
+}
+
+.row {
+  box-sizing: border-box;
+  display: flex;
+}
+
+.place {
+  box-sizing: border-box;
+  flex: 1 1 0%;
+}
+
+.rankBadge {
+  background-color: rgb(227, 255, 9);
+  border-radius: 5px;
+  padding: 4px 4px 2px;
+  margin: 0px auto;
+  width: 40px;
+  display: inline-block;
+  text-align: center;
+  line-height: 100%;
+}
+
+.points {
+  box-sizing: border-box;
+  flex: 1 0 50px;
+  text-align: right;
+}
+
+.spacer {
+  box-sizing: border-box;
+  flex: 1 1 0%;
+}
