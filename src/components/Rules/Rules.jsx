@@ -359,7 +359,7 @@ const Rules = (props) => {
             </ul> */}
             <div className={styles.distTable}>
               {tables.map((el) => (
-                <PointDistribution title={el.title} data={el.dist} />
+                <PointDistribution key={el.title} title={el.title} data={el.dist} />
               ))}
             </div>
             

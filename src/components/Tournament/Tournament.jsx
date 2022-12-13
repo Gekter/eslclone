@@ -3,6 +3,10 @@ import TournamentCard from '../TournamentCard/TournamentCard';
 import styles from './Tournament.module.css';
 
 const Tournament = (props) => {
+  if (!props.tournaments) {
+    return <div></div>
+  }
+
   return (
     <div>
       <h1 className={styles.title}>Турниры</h1>

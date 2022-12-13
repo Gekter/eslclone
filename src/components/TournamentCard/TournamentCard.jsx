@@ -13,7 +13,7 @@ const TournamentCard = (props) => {
                 {props.data.date}
               </span>
             </div>
-            <Link className={styles.tournamentName}>
+            <Link className={styles.tournamentName} to={'/tournament/'+props.data.id}>
               {props.data.TournamentName/* TournamentName */}
             </Link>
           </div>
@@ -63,7 +63,7 @@ const TournamentCard = (props) => {
 
 
         <div>
-          <Link className={styles.teamCardRow__button}>Full Results</Link>
+          <Link className={styles.teamCardRow__button} to={'/tournament/'+props.data.id}>Full Results</Link>
           {/* <Link /> */}
         </div>
 

@@ -1,0 +1,137 @@
+.page {
+  box-sizing: border-box;
+  padding: 0px 8px;
+  width: 100%;
+}
+
+.containerRow {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+  max-width: 1800px;
+  margin: 0px auto;
+}
+.containerColumn {
+  width: 75%;
+}
+
+.container {
+  box-sizing: border-box;
+  padding-left: 4px;
+  padding-right: 4px;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  position: relative;
+}
+
+.resRow {
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 74px;
+  margin: 0px auto 1px;
+  background-color: rgb(237, 237, 228);
+}
+
+.place {
+  box-sizing: border-box;
+  padding: 25px 5px 5px;
+  margin: 0px;
+  background-color: rgb(156, 156, 147);
+  flex: 0 1 70px;
+  text-align: center;
+  min-width: 40px;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.place span {
+  background-color: rgb(227, 255, 9);
+  border-radius: 5px;
+  padding: 4px 4px 2px;
+  margin: 0px auto;
+  width: 40px;
+  display: inline-block;
+  text-align: center;
+  line-height: 100%;
+}
+
+.team {
+  box-sizing: border-box;
+  padding: 5px;
+  margin: 0px;
+  flex: 1 1 310px;
+}
+
+.teamLogo {
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-right: 26px;
+  margin-left: 16px;
+  margin-top: 10px;
+}
+
+.teamLogo img {
+  box-sizing: border-box;
+  margin: 0px;
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 50%;
+}
+
+.teamName {
+  box-sizing: border-box;
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: bold;
+}
+
+.players {
+  box-sizing: border-box;
+  padding-left: 125px;
+}
+
+.player {
+  background-color: rgb(227, 255, 9);
+  color: rgb(29, 29, 27);
+  border-radius: 10px;
+  padding: 3px 10px 1px;
+  margin-right: 4px;
+  line-height: 25px;
+}
+
+.points {
+  box-sizing: border-box;
+  flex: 1 1 0%;
+  padding: 5px 10px 5px 5px;
+  margin: 0px;
+  text-align: right;
+  min-width: 80px;
+  font-size: 24px;
+  line-height: 70px;
+}
+
+.subPoints {
+  opacity: 0.5;
+}
+
+.info {
+  box-sizing: border-box;
+  display: flex;
+  max-width: 1800px;
+  margin: 0px auto 10px;
+  flex-wrap: wrap;
+}
+
+.w50 {
+  width: 50%;
+}
+
+.ta_r {
+  text-align: right;
+}
