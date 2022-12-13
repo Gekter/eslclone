@@ -1,247 +1,350 @@
 import styles from "./Rules.module.css";
+import PointDistribution from "../PointDistribution/PointDistribution";
 
 const Rules = (props) => {
+  const tables = [
+    {
+      title: 'Огромный турнир',
+      dist: [
+        {place: '1', points: '1150'},
+        {place: '2', points: '700'},
+        {place: '3', points: '500'},
+        {place: '3-4', points: '450'},
+        {place: '4', points: '400'},
+        {place: '4-5', points: '360'},
+        {place: '5', points: '320'},
+        {place: '5-6', points: '300'},
+        {place: '6', points: '280'},
+        {place: '5-8', points: '262.5'},
+        {place: '6-7', points: '260'},
+        {place: '7', points: '240'},
+        {place: '7-8', points: '225'},
+        {place: '8', points: '210'},
+        {place: '8-9', points: '195'},
+        {place: '9', points: '180'},
+        {place: '9-10', points: '170'},
+        {place: '10', points: '160'},
+        {place: '9-11', points: '160'},
+        {place: '9-12', points: '150'},
+        {place: '10-11', points: '150'},
+        {place: '11', points: '140'},
+        {place: '10-12', points: '140'},
+        {place: '11-12', points: '130'},
+        {place: '12', points: '120'},
+        {place: '12-13', points: '110'},
+        {place: '12-14', points: '101.677'},
+        {place: '13', points: '100'},
+        {place: '13-14', points: '92.5'},
+        {place: '14', points: '85'},
+        {place: '13-15', points: '85'},
+        {place: '13-16', points: '77.5'},
+        {place: '14-15', points: '77.5'},
+        {place: '15', points: '70'},
+        {place: '14-16', points: '70'},
+        {place: '15-16', points: '62.5'},
+        {place: '16', points: '55'},
+        {place: '16-17', points: '47.5'},
+        {place: '17', points: '40'},
+        {place: '17-18', points: '35'},
+        {place: '18', points: '30'},
+        {place: '17-19', points: '30'},
+        {place: '17-20', points: '25'},
+        {place: '18-19', points: '25'},
+        {place: '19', points: '20'},
+        {place: '18-20', points: '20'},
+        {place: '19-20', points: '15'},
+        {place: '20', points: '10'},
+      ]
+    },
+    {
+      title: 'Большой турнир',
+      dist: [
+        {place: '1', points: '1000'},
+        {place: '2', points: '600'},
+        {place: '3', points: '450'},
+        {place: '3-4', points: '400'},
+        {place: '4', points: '350'},
+        {place: '4-5', points: '312.5'},
+        {place: '5', points: '275'},
+        {place: '5-6', points: '257.5'},
+        {place: '6', points: '240'},
+        {place: '5-8', points: '225.5'},
+        {place: '6-7', points: '225.5'},
+        {place: '7', points: '205'},
+        {place: '7-8', points: '187.5'},
+        {place: '8', points: '170'},
+        {place: '8-9', points: '155'},
+        {place: '9', points: '140'},
+        {place: '9-10', points: '127.5'},
+        {place: '10', points: '115'},
+        {place: '9-11', points: '115'},
+        {place: '9-12', points: '102.5'},
+        {place: '10-11', points: '102.5'},
+        {place: '11', points: '90'},
+        {place: '10-12', points: '90'},
+        {place: '11-12', points: '77.5'},
+        {place: '12', points: '65'},
+        {place: '12-13', points: '52.5'},
+        {place: '12-14', points: '45'},
+        {place: '13', points: '40'},
+        {place: '13-14', points: '35'},
+        {place: '14', points: '30'},
+        {place: '13-15', points: '30'},
+        {place: '13-16', points: '25'},
+        {place: '14-15', points: '25'},
+        {place: '15', points: '20'},
+        {place: '14-16', points: '20'},
+        {place: '15-16', points: '15'},
+        {place: '16', points: '10'},
+      ]
+    },
+    {
+      title: 'Средний турнир',
+      dist: [
+        {place: '1', points: '850'},
+        {place: '2', points: '500'},
+        {place: '3', points: '390'},
+        {place: '3-4', points: '345'},
+        {place: '4', points: '300'},
+        {place: '4-5', points: '270'},
+        {place: '5', points: '240'},
+        {place: '5-6', points: '220'},
+        {place: '6', points: '200'},
+        {place: '5-8', points: '180'},
+        {place: '6-7', points: '180'},
+        {place: '7', points: '160'},
+        {place: '7-8', points: '140'},
+        {place: '8', points: '120'},
+        {place: '8-9', points: '100'},
+        {place: '9', points: '80'},
+        {place: '9-10', points: '70'},
+        {place: '10', points: '60'},
+        {place: '9-11', points: '60'},
+        {place: '9-12', points: '50'},
+        {place: '10-11', points: '50'},
+        {place: '11', points: '40'},
+        {place: '10-12', points: '40'},
+        {place: '11-12', points: '30'},
+        {place: '12', points: '20'},
+      ]
+    },
+    {
+      title: 'Малый турнир',
+      dist: [
+        {place: '1', points: '700'},
+        {place: '2', points: '420'},
+        {place: '3', points: '320'},
+        {place: '3-4', points: '285'},
+        {place: '4', points: '250'},
+        {place: '4-5', points: '215'},
+        {place: '5', points: '180'},
+        {place: '5-6', points: '157.5'},
+        {place: '6', points: '135'},
+        {place: '5-8', points: '112.5'},
+        {place: '6-7', points: '112.5'},
+        {place: '7', points: '90'},
+        {place: '7-8', points: '67.5'},
+        {place: '8', points: '45'},
+      ]
+    },
+    {
+      title: 'Крошечный турнир',
+      dist: [
+        {place: '1', points: '500'},
+        {place: '2', points: '300'},
+        {place: '3', points: '160'},
+        {place: '3-4', points: '120'},
+        {place: '4', points: '80'},
+      ]
+    },
+  ]
+
   return (
     <div className={styles.container}>
       <div className={styles.contaierColumn}>
         <div className={styles.contaierColumnBoxInner}>
           <div className={styles.rulesBody}>
-            <h2>Ranking Rules</h2>
-            <h2>I. Basics</h2>
-            <h3>The main Ranking</h3>
+            <h2>Правила начисления рейтинга</h2>
+            <h2>I. Основные</h2>
+            <h3>Основной рейтинг</h3>
             <p>
-              The Main Ranking (also known as Power Ranking) shows the current
-              power of each lineup that is playing together at the moment. It
-              can be used for invitations and seedings.
+              Основной рейтинг (также известный как Рейтинг мощности) показывает текущую мощность каждого состава, который играет вместе в данный момент.
             </p>
-            <h3>How do the ranking points work?</h3>
-            <p>Points will be awarded to the players.</p>
-            <h3>What is "decay"?</h3>
+            <h3>Как работают рейтинговые очки?</h3>
+            <p>Игрокам будут начислены очки.</p>
+            <h3>Что такое "Уменьшение"?</h3>
             <p>
-              Points will decay over time until they disappear after six months.
+              Очки будут уменьшаться с течением времени, пока не исчезнут через шесть месяцев.
             </p>
-            <h3>How many points do tournaments give?</h3>
+            <h3>Сколько очков дают турниры?</h3>
             <p>
-              Tournaments are rated by quality (TI and AAA to D), quantity (XXL
-              to S) of participants and the relative size of the offline part of
-              the competition, the points depend on the ratings.
+            Турниры оцениваются по качеству (от TI и AAA до D), количеству (от XXL до S) участников и относительному размеру оффлайн-части соревнований, баллы зависят от рейтингов.
             </p>
-            <h2>II. Details:</h2>
-            <h3>How do the ranking points work?</h3>
+            <h2>II. Подробности:</h2>
+            <h3>Как работают рейтинговые очки?</h3>
             <p>
-              Points will be awarded to the attending players (normally 20%
-              each), after the competition they come from has ended.
+            Очки будут начислены участвующим игрокам (обычно по 20% каждому) после окончания соревнования, с которого они приехали.
             </p>
             <p>
-              Points are not transferable and will always stay with the player
-              that earned them. No player can earn points in the same
-              competition for more than one team.
+            Очки не подлежат передаче и всегда остаются у игрока, который их заработал. Ни один игрок не может зарабатывать очки в одном соревновании более чем за одну команду.
             </p>
             <p>
-              If the team attended an offline part of a competition, only the
-              offline lineup will be considered. If the relevant lineup was
-              unclear or if the team won no matches during the offline part of
-              the competition, the following rules apply:
+            Если команда участвовала в офлайн-части соревнований, будет учитываться только офлайн-состав. Если соответствующий состав был неясен или команда не выиграла ни одного матча во время оффлайн-части соревнований, применяются следующие правила:
             </p>
             <ul>
               <li>
-                The five players that were clearly the standard lineup at the
-                end of the competition (for this team, of course lineup changes
-                after their last match in the tournament have no impact) get the
-                points.
+              Пять игроков, которые явно были в стандартном составе в конце соревнования (для этой команды, конечно, изменения в составе после их последнего матча на турнире не имеют никакого влияния), получают очки.
               </li>
               <li>
-                If no clear standard lineup is recognizable, the five players
-                with the biggest participation get the points
+              Если четкий стандартный состав не распознается, очки получают пять игроков с наибольшим участием
               </li>
               <li>
-                If participation is equal among players, later matches in the
-                relevant part of the competition are considered more important
+              Если участие игроков равное, более поздние матчи в соответствующей части соревнования считаются более важными
               </li>
             </ul>
             <p>
-              The Power Ranking position of a team at any time is determined by
-              the sum of the decayed points of their best five active players
+              Положение команды в рейтинге силы в любой момент определяется суммой очков, набранных ее пятью лучшими активными игроками
             </p>
             <p>
-              The points will be implemented in the ranking as soon as possible
-              after the end of any tournament considered for the ranking.
+            Очки будут внесены в рейтинг как можно скорее после окончания любого турнира, учитываемого для рейтинга.
             </p>
-            <h3>What is "decay"?</h3>
+            <h3>Что такое "Уменьшение"?</h3>
             <p>
-              Points for players will decay over time. Once per week (12:00am
-              UTC on the Morning of every Monday) points „age“ and the ranking
-              is updated with the decay. The date of an event is the day its
-              last tournament day started on in local time. This is the
-              remaining value after each end of month:
+            Очки для игроков будут уменьшаться с течением времени. Раз в неделю обновляется с уменьшением:
             </p>
             <ul>
-              <li>0 weeks: 100%</li>
-              <li>1 week: 100%</li>
+              <li>0 недель: 100%</li>
+              <li>1 неделя: 100%</li>
               <li>..</li>
-              <li>6 weeks: 100%</li>
-              <li>7 weeks: 95%</li>
-              <li>8 weeks: 90%</li>
+              <li>6 недель: 100%</li>
+              <li>7 недель: 95%</li>
+              <li>8 недель: 90%</li>
               <li>..</li>
-              <li>24 weeks: 10%</li>
-              <li>25 weeks: 5%</li>
-              <li>&gt;25 weeks: 0%</li>
+              <li>24 недели: 10%</li>
+              <li>25 недель: 5%</li>
+              <li>&gt;25 недель: 0%</li>
             </ul>
-            <h3>How many points do tournaments give?</h3>
+            <h3>Сколько очков дают турниры?</h3>
             <p>
-              Tournaments are rated by quantity (XXL, XL, L, M, S) and quality
-              (TI, AAA, AA, A, B, C, D) of participants. A team is considered a
-              participant, if it played in the main tournament or an online
-              season (if that online season ran over an extended period of time
-              and number of matches) or in an offline qualifier (if that offline
-              qualifier had a significant number of non-local participants and
-              was not a "BYOC" tournament).
+            Турниры оцениваются по количеству (XXL, XL, L, M, S) и качеству (TI, AAA, AA, A, B, C, D) участников. Команда считается участником, если она играла в основном турнире или онлайн-сезоне.
             </p>
             <p>
-              If a team does not complete a tournament, it will not be
-              considered part of the tournament. If it gets replaced, the
-              replacement will be considered instead.
+            Если команда не завершит турнир, она не будет считаться частью турнира. Если она будет заменена, вместо этого будет рассмотрена замена.
             </p>
-            <h4>1. General Requirements</h4>
+            <h4>1. Общие требования</h4>
             <p>
-              Tournaments will be considered for the ranking, if they meet
-              certain conditions:
+            Турниры будут учитываться для ранжирования, если они соответствуют определенным условиям:
             </p>
             <ul>
+              <li>Размер турнира не меньше "S"</li>
               <li>
-                follow a ruleset that is in line with the basic agreed rules of
-                competitive Dota 2 (i.e. 5on5 etc.) and fairplay.
-              </li>
-              <li>have a Size of at least "S"</li>
-              <li>
-                are not competitions whose main purpose is qualification to
-                another competition nor tournaments that are being created with
-                the main purpose to generate World Ranking points.
+              это не соревнования, основной целью которых является квалификация к другому соревнованию, и не турниры, которые создаются с основной целью получения очков мирового рейтинга.
               </li>
             </ul>
-            <h4>2. Size</h4>
+            <h4>2. Размер</h4>
             <p>
-              The size of a tournament is measured in the following categories.
-              You can find the point distribution of each size at the end of
-              this document.
+            Размер турнира измеряется в следующих категориях. Вы можете найти распределение точек каждого размера в конце этого документа.
             </p>
             <ul>
               <li>XXL:</li>
               <li>
                 <ul>
-                  <li>A total of 22+ participants</li>
+                  <li>В общей сложности более 22 участников</li>
                   <li>
-                    At least 16 of the top24 of the ESL Power Ranking (ranking
-                    at the time the tournament starts).
+                  По крайней мере 16 находятся в лучших 24 командах (рейтинг на момент начала турнира).
                   </li>
                 </ul>
               </li>
               <li>XL:</li>
               <li>
                 <ul>
-                  <li>A total of 14+ participants</li>
+                  <li>Всего более 14 участников</li>
                   <li>
-                    At least 10 of the top24 of the ESL Power Ranking (ranking
-                    at the time the tournament starts).
+                    Не менее 10 из находятся в лучших 24 командах рейтинга (рейтинг на момент начала турнира).
                   </li>
                 </ul>
               </li>
               <li>L:</li>
               <li>
                 <ul>
-                  <li>A total of 10+ participants</li>
+                  <li>Всего более 10 участников</li>
                   <li>
-                    At least 7 of the top24 of the ESL Power Ranking (ranking at
-                    the time the tournament starts).
+                  Не менее 7 из находятся в лучших 24 командах рейтинга (рейтинг на момент начала турнира).
                   </li>
                 </ul>
               </li>
               <li>M:</li>
               <li>
                 <ul>
-                  <li>A total of 6+ participants</li>
+                  <li>Всего более 6 участников</li>
                   <li>
-                    At least 4 of the top24 of the ESL Power Ranking (ranking at
-                    the time the tournament starts).
+                  Не менее 4 из находятся в лучших 24 командах рейтинга (рейтинг на момент начала турнира).
                   </li>
                 </ul>
               </li>
               <li>S:</li>
               <li>
                 <ul>
-                  <li>A total of 4+ participants</li>
+                  <li>Всего более 4 участников</li>
                   <li>
-                    At least 3 of the top24 of the ESL Power Ranking (ranking at
-                    the time the tournament starts).
+                  Не менее 3 из находятся в лучших 24 командах рейтинга (рейтинг на момент начала турнира).
                   </li>
                 </ul>
               </li>
             </ul>
-            <h4>3. Quality Rating</h4>
+            <h4>3. Оценка качества</h4>
             <p>
-              The Quality Rating depends on the participating top12 teams of the
-              ESL Power Ranking (ranking at the time the tournament starts):
+            Рейтинг качества зависит от участвующих 12 лучших команд рейтинга (рейтинг на момент начала турнира):
             </p>
             <ul>
-              <li>#1 +14 rating</li>
-              <li>#2 +13 rating</li>
-              <li>#3 +12 rating</li>
-              <li>#4 +11 rating</li>
-              <li>#5 +10 rating</li>
-              <li>#6 +9 rating</li>
-              <li>#7 +8 rating</li>
-              <li>#8 +7 rating</li>
-              <li>#9 +6 rating</li>
-              <li>#10 +5 rating</li>
-              <li>#11 +4 rating</li>
-              <li>#12 +3 rating</li>
+              <li>#1 +14 рейтинга</li>
+              <li>#2 +13 рейтинга</li>
+              <li>#3 +12 рейтинга</li>
+              <li>#4 +11 рейтинга</li>
+              <li>#5 +10 рейтинга</li>
+              <li>#6 +9 рейтинга</li>
+              <li>#7 +8 рейтинга</li>
+              <li>#8 +7 рейтинга</li>
+              <li>#9 +6 рейтинга</li>
+              <li>#10 +5 рейтинга</li>
+              <li>#11 +4 рейтинга</li>
+              <li>#12 +3 рейтинга</li>
             </ul>
             <p>
-              This means that the maximum number for the Quality Rating of a
-              tournament is 102 (if all of the top12 ranked teams are
-              participating). Possible qualities are:
+            Это означает, что максимальное число для рейтинга качества турнира равно 102 (если участвуют все 12 лучших команд). Возможными качествами являются:
             </p>
             <ul>
-              <li>TI (The International): Point Multiplier is 150%</li>
-              <li>AAA (79+ rating): Point Multiplier is 100%</li>
-              <li>AA (62-78 rating): Point Multiplier is 80%</li>
-              <li>A (46-61 rating): Point Multiplier is 60%</li>
-              <li>B (32-45 rating): Point Multiplier is 40%</li>
-              <li>C (15-31 rating): Point Multiplier is 25%</li>
-              <li>D (0-14 rating): Point Multiplier is 15%.</li>
+              <li>TI (The International): Множитель очков равен 150%</li>
+              <li>AAA (79+ рейтинга): Множитель очков равен 100%</li>
+              <li>AA (62-78 рейтинга): Множитель очков равен 80%</li>
+              <li>A (46-61 рейтинга): Множитель очков равен 60%</li>
+              <li>B (32-45 рейтинга): Множитель очков равен 40%</li>
+              <li>C (15-31 рейтинга): Множитель очков равен 25%</li>
+              <li>D (0-14 рейтинга): Множитель очков равен 15%.</li>
             </ul>
-            <h4>4. Online/Offline Part</h4>
+            <h4>4. Онлайн/Оффлайн часть</h4>
             <p>
-              This additional multiplier depends on the percentage of offline
-              teams in relation to the minimum number of total teams required
-              for a Size (e.g. 22 for XXL, 14 for XL etc.):
+            Этот дополнительный множитель зависит от процента автономных команд по отношению к минимальному количеству команд, требуемому для размера (например, 22 для XXL, 14 для XL и т.д.):
             </p>
             <ul>
-              <li>70-100%: Point Multiplier is 100%</li>
-              <li>50-69.99%: Point Multiplier is 90%</li>
-              <li>30-49.99%: Point Multiplier is 80%</li>
+              <li>70-100%: Множитель очков равен 100%</li>
+              <li>50-69.99%: Множитель очков равен 90%</li>
+              <li>30-49.99%: Множитель очков равен 80%</li>
               <li>
-                less than 30% but at least 2 teams: Point Multiplier is 70%
+              менее 30%, но не менее 2 команд: Множитель очков равен 70%
               </li>
-              <li>Online-only: Point Multiplier is 50%</li>
+              <li>Только онлайн: Множитель очков равен 50%</li>
             </ul>
-            <h3>Tiebreakers</h3>
+            <h3>При равном количестве очков</h3>
             <p>
-              If teams in the Power Ranking are exactly tied by points at some
-              point, the one that has played together in that composition for
-              the longer time is ahead.
-            </p>
+            Если команды в рейтинге силы в какой-то момент точно равны по очкам, то впереди та, которая играла вместе в этом составе дольше всех.            </p>
             <p>
-              If organisations in the Club Ranking are exactly tied by points at
-              some point, the one that reached the better result in the most
-              recently ended competition that is part of the ESL Club Ranking is
-              ahead.
+            Если организации в клубном рейтинге в какой-то момент точно равны по очкам, то впереди та, которая достигла лучшего результата в последнем завершившемся соревновании, входящем в рейтинг.
             </p>
-            <h2>Points Distribution</h2>
-            <ul>
+            <h2>Распределение очков</h2>
+            {/* <ul>
               <li>
-                If ranks are shared, the points for those ranks will be added
-                and shared equally, too.
+              Если место распределяются, то баллы за эти ранги также будут суммироваться и распределяться поровну.
               </li>
               <li>
                 Points will always be distributed to a <b>maximum</b> of teams
@@ -253,7 +356,13 @@ const Rules = (props) => {
                 (including online season and offline qualifiers) will not
                 receive any points.
               </li>
-            </ul>
+            </ul> */}
+            <div className={styles.distTable}>
+              {tables.map((el) => (
+                <PointDistribution title={el.title} data={el.dist} />
+              ))}
+            </div>
+            
           </div>
         </div>
       </div>

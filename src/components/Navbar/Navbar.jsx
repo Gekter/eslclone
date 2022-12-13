@@ -6,7 +6,7 @@ const Navbar = (props) => {
   let arr = [
     {NavText: 'Рейтинг', link: '/'},
     {NavText: 'Турниры', link: '/tournaments'},
-    {NavText: 'Игроки', link: '/team'},
+    // {NavText: 'Игроки', link: '/team'},
     {NavText: 'Правила', link: '/rules'}
   ]
   return (

@@ -95,7 +95,7 @@ const App = () => {
   const tournaments = [{
     id: 1,
     date: 'October 30th 2022',
-    TournamentName: 'The International 2022',
+    TournamentName: ' 2022',
     quality: 'TI',
     tournamentSize: 'XXL',
     teams: [
@@ -161,8 +161,8 @@ const App = () => {
     id: 6,
     date: 'August 28th 2022',
     TournamentName: 'ESL One Malaysia 2022',
-    quality: 'B',
-    tournamentSize: 'L',
+    quality: 'AAA',
+    tournamentSize: 'XXL',
     teams: [
       {id: 6, name: 'OG', pts: 340.0, place: 1},
       {id: 4, name: 'Team Aster', pts: 200.0, place: 2},
@@ -174,8 +174,8 @@ const App = () => {
     id: 7,
     date: 'August 28th 2022',
     TournamentName: 'ESL One Malaysia 2022',
-    quality: 'B',
-    tournamentSize: 'L',
+    quality: 'A',
+    tournamentSize: 'XL',
     teams: [
       {id: 6, name: 'OG', pts: 340.0, place: 1},
       {id: 4, name: 'Team Aster', pts: 200.0, place: 2},
@@ -200,8 +200,8 @@ const App = () => {
     id: 9,
     date: 'August 28th 2022',
     TournamentName: 'ESL One Malaysia 2022',
-    quality: 'B',
-    tournamentSize: 'L',
+    quality: 'AAA',
+    tournamentSize: 'S',
     teams: [
       {id: 6, name: 'OG', pts: 340.0, place: 1},
       {id: 4, name: 'Team Aster', pts: 200.0, place: 2},

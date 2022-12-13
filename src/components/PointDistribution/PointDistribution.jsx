@@ -12,12 +12,11 @@ const PointDistribution = (props) => {
               .
             </span>
           </div>
-          <div className="points">
+          <div className={styles.points}>
             +
-            {el.points}
-            pts.
+            {el.points + ' pts.'}
           </div>
-          <div className="spacer"></div>
+          <div className={styles.spacer}></div>
         </div>
       ))}
     </div>
