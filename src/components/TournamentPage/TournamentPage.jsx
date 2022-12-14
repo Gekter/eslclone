@@ -6,16 +6,14 @@ import styles from "./TournamentPage.module.css";
 const TournamentPage = (props) => {
   const { id } = useParams()
   const [data, setData] = useState()
+  
 
-  const fetchTournament = () => {
+
+  useEffect(() => {
     fetch(`https://cdn1.api.esl.tv/dota2/worldranking/event/view?id=${id}`)
     .then(res => res.json())
     .then(data => setData(data.items[0]))
-  }
-
-  useEffect(() => {
-    fetchTournament()
-  }, [])
+  }, [id])
 
   
 
@@ -33,10 +31,10 @@ const TournamentPage = (props) => {
             <div className={styles.info}>
               <div className={styles.w50}>
                 <div>
-                  {data.begin + ' - ' + data.end + ' | '}<a href={data.homepage} target="_blank">liquipedia</a>
+                  {data.begin + ' - ' + data.end + ' | '}<a rel="noreferrer" href={data.homepage} target="_blank">liquipedia</a>
                 </div>
                 <div>
-                  {'Организатор: '}<a href={data.organizer.url} rel="noreferrer" target='_blank'>{data.organizer.name}</a>
+                  {'Организатор: '}<a rel="noreferrer" href={'https://' + data.organizer.url} target='_blank'>{data.organizer.name}</a>
                 </div>
               </div>
               <div className={[styles.w50, styles.ta_r].join(' ')}>
